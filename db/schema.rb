@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170130024632) do
+ActiveRecord::Schema.define(version: 20170204211416) do
 
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "professors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "section_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id"], name: "index_professors_on_section_id", using: :btree
   end
 
   create_table "sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -35,6 +44,7 @@ ActiveRecord::Schema.define(version: 20170130024632) do
     t.index ["section_id"], name: "index_students_on_section_id", using: :btree
   end
 
+  add_foreign_key "professors", "sections"
   add_foreign_key "sections", "courses"
   add_foreign_key "students", "sections"
 end
