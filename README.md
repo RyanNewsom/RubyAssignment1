@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-# README
+# Ruby Assignment 1
+##About
+This is a basic ruby assignment I did for my Advanced Web Architecture class. It allows you to store and retrieve Students, Courses, Sections, and Professors. Uses mysql as the DB.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -22,7 +23,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-=======
-# RubyAssignment1
->>>>>>> 89bd055afad381a313516ec9c7b73f524c174e1d
+* ..
