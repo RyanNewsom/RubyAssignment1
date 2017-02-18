@@ -27,6 +27,7 @@ class SectionsController < ApplicationController
   # POST /sections.json
   def create
     @section = Section.new(section_params)
+    @courses = Course.all
 
     respond_to do |format|
       if @section.save
