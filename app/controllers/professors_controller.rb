@@ -27,6 +27,7 @@ class ProfessorsController < ApplicationController
   # POST /professors.json
   def create
     @professor = Professor.new(professor_params)
+    @sections = Section.all
 
     respond_to do |format|
       if @professor.save
