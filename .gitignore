@@ -68,4 +68,5 @@ build-iPhoneSimulator/
 
 #Rubymine
 *.iml
-workspace/
+/workspace/
+/.idea/
