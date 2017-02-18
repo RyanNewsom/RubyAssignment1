@@ -5,6 +5,13 @@ class SectionsController < ApplicationController
   # GET /sections.json
   def index
     @sections = Section.all
+
+    if params[:search]
+      @sections = Section.search(params[:search]).order("name")
+    else
+      @sections = Section.all.order('name')
+    end
+
   end
 
   # GET /sections/1
@@ -27,6 +34,7 @@ class SectionsController < ApplicationController
   # POST /sections.json
   def create
     @section = Section.new(section_params)
+    @courses = Course.all
 
     respond_to do |format|
       if @section.save

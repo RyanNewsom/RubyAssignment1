@@ -5,6 +5,12 @@ class ProfessorsController < ApplicationController
   # GET /professors.json
   def index
     @professors = Professor.all
+
+    if params[:search]
+      @professors = Professor.search(params[:search]).order("name")
+    else
+      @professors = Professor.all.order('name')
+    end
   end
 
   # GET /professors/1
@@ -27,6 +33,7 @@ class ProfessorsController < ApplicationController
   # POST /professors.json
   def create
     @professor = Professor.new(professor_params)
+    @sections = Section.all
 
     respond_to do |format|
       if @professor.save

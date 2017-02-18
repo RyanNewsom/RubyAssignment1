@@ -24,6 +24,20 @@
       </tr>
     <% end %>
   </tbody>
+
+  <tr>
+    <%= form_tag(professors_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Professors" %>
+      <%= submit_tag "Search" %>
+  <% end %>
+
+  <% if @professors.present? %>
+
+  <% else %>
+      <p>There are no professors named <%= params[:search] %>.</p>
+  <% end %>
+
+  </tr>
 </table>
 
 <br>
