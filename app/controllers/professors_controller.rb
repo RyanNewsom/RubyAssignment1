@@ -5,6 +5,12 @@ class ProfessorsController < ApplicationController
   # GET /professors.json
   def index
     @professors = Professor.all
+
+    if params[:search]
+      @professors = Professor.search(params[:search]).order("name")
+    else
+      @professors = Professor.all.order('name')
+    end
   end
 
   # GET /professors/1
