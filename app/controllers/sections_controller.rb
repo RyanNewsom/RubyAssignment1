@@ -50,6 +50,8 @@ class SectionsController < ApplicationController
   # PATCH/PUT /sections/1
   # PATCH/PUT /sections/1.json
   def update
+    @courses = Course.all
+
     respond_to do |format|
       if @section.update(section_params)
         format.html { redirect_to @section, notice: 'Section was successfully updated.' }

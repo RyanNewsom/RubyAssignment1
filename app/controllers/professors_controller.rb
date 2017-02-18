@@ -49,6 +49,8 @@ class ProfessorsController < ApplicationController
   # PATCH/PUT /professors/1
   # PATCH/PUT /professors/1.json
   def update
+    @sections = Section.all
+
     respond_to do |format|
       if @professor.update(professor_params)
         format.html { redirect_to @professor, notice: 'Professor was successfully updated.' }
