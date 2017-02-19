@@ -35,7 +35,8 @@ gem 'bcrypt', platforms: :ruby
 # Devise for User Authentication
 gem 'devise'
 
-
+#Materialize for design
+gem 'materialize-sass'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
