@@ -1,19 +1,35 @@
-<p id="notice"><%= notice %></p>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <link rel="stylesheet" href="materialize.scss.scss">
+  <link rel="stylesheet" href="common.scss">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</head>
 
-<p>
-  <strong>Name:</strong>
-  <%= @professor.name %>
-</p>
+<body>
+  <div class="container">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @professor.email %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @professor.name %>
+    </p>
 
-<p>
-  <strong>Section:</strong>
-  <%= @professor.section.name %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @professor.email %>
+    </p>
 
-<%= link_to 'Edit', edit_professor_path(@professor) %> |
-<%= link_to 'Back', professors_path %>
+    <p>
+      <strong>Section:</strong>
+      <%= @professor.section.name %>
+    </p>
+
+    <%= link_to 'Edit', edit_professor_path(@professor) %> |
+    <%= link_to 'Back', professors_path %>
+  </div>
+</body>
+
+

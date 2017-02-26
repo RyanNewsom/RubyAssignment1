@@ -35,6 +35,12 @@ gem 'bcrypt', '~> 3.1.3'
 # Devise for User Authentication
 gem 'devise'
 
+gem "materialize-sass"
+gem "material_icons"
+gem "simple_form"
+
+gem "simple_form_materialize", "~>1.0.0"
+
 #Materialize for design
 gem 'materialize-sass'
 
