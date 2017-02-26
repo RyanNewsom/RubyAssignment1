@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bcrypt', platforms: :ruby
+gem 'bcrypt', '~> 3.1.3'
 # Devise for User Authentication
 gem 'devise'
 
